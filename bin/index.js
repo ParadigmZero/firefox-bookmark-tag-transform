@@ -28,7 +28,7 @@ catch {
 
 const outputFile = createWriteStream(outputFilePath, { flags: 'a' });
 
-console.log('Transforming Firefox desktop tags...');
+console.log(`Transforming Firefox's desktop-only bookmark tags to a more universal format...`);
 
 lineReader.eachLine(process.argv[2], function (line, last) {
     const tagsProperty = line.match(/TAGS="(.*)"/);
