@@ -28,7 +28,9 @@ catch {
 
 const outputFile = createWriteStream(outputFilePath, { flags: 'a' });
 
-lineReader.eachLine(process.argv[2], function (line, last) {
+console.log('removing tags from link element "TAGS" (bookmarks "tags" unique to Firefox desktop versions) attribute converting/placing into link element title (bookmark title - universal amongst browsers)');
+
+await lineReader.eachLine(process.argv[2], function (line, last) {
     const tagsProperty = line.match(/TAGS="(.*)"/);
     if (tagsProperty === null) {
         outputFile.write(line);
@@ -41,6 +43,9 @@ lineReader.eachLine(process.argv[2], function (line, last) {
         outputFile.write('\n');
     }
 });
+
+console.log('output:');
+console.log(outputFilePath);
 
 function transformTags(tagsProperty) {
     // tags value
@@ -58,17 +63,10 @@ function transformTags(tagsProperty) {
     titleTags = titleTags.trimEnd();
 
 
-    // console.log(tags);
-    // console.log(tags[1]);
-    // console.log(tags.input);
-
     // remove TAGS property from the original line
     let updatedLine = tagsProperty.input.replace(/[ ]*TAGS=".*"[ ]*/,'');
     updatedLine = updatedLine.replace('</A>',`${titleTags}</A>`);
 
-    // place the tags into the title
-    
-    // console.log(updatedLine);
     return updatedLine;
 }
 
