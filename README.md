@@ -18,6 +18,10 @@ Give one argument, being the (path and) filename.
 
 `npx firefoxbookmarktagtransform bookmarks.html`
 
+To run locally for test/development purposes from directory:
+
+`npm start bookmarks.html`
+
 # Use case
 
 NOTE: below is the most frictionless way of using these converted bookmarks in Firefox across all your devices, but it doesn't take into account things like passwords and tabs and only takes into account the bookmarks you sync. It will wipe everything clean locally and on your Mozilla sync, and start over.
