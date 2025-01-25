@@ -2,17 +2,18 @@
   "name": "firefoxbookmarktagtransform",
   "version": "1.0.2",
   "description": "Command line application to take all the values from TAGS attributes and place them into the tags content (and so the bookmark title), in a way useful to the user.",
-  "main": "bin/index.js",
+  "main": "index.js",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/ParadigmZero/FirefoxBookmarkTagTransform.git"
   },
   "bin": {
-    "firefoxbookmarktagtransform": "bin/index.js"
+    "firefoxbookmarktagtransform": "index.js"
   },
   "keywords": [],
   "scripts": {
-    "start":"node ./bin/index.js"
+    "start":"node ./index.js"
   },
   "author": "Joseph Alton",
   "license": "MIT",

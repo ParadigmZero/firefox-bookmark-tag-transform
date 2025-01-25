@@ -1,4 +1,4 @@
-A command-line application JavaScript Node application to convert a Firefox HTML file (these can be exported), so that the 'TAGS' are removed from the anchor HTML tags, then places within the anchor link text instead (i.e. in the bookmark title). This conversion will output to: `TRANSFORMED_<your file>` in the same directory as your input file
+A command-line application/library JavaScript Node application to convert a Firefox HTML file (these can be exported), so that the 'TAGS' are removed from the anchor HTML tags, then places within the anchor link text instead (i.e. in the bookmark title). This conversion will output to: `TRANSFORMED_<your file>` in the same directory as your input file
 
 For example, instances such as:
 
@@ -12,13 +12,20 @@ Within the output file.
 
 # Running
 
-Designed to be run with npx (Node/npm must be installed).
+Node/npm must be installed.
+
+## npx
 
 Give one argument, being the (path and) filename.
 
 `npx firefoxbookmarktagtransform bookmarks.html`
 
-To run locally for test/development purposes from directory:
+
+## local
+
+To run locally for test/development purposes from directory.
+
+(if using nvm, you can fist enter `nvm install`)
 
 `npm start bookmarks.html`
 
