@@ -10,11 +10,13 @@ become:
 
 Within the output file.
 
+Easily runnable with npx with anyone who has NodeJS installed.
+
 # Running
 
-Node/npm must be installed.
+Node must be installed.
 
-## npx
+## npx executable (in terminal)
 
 Give one argument, being the (path and) filename.
 
@@ -28,6 +30,21 @@ To run locally for test/development purposes from directory.
 (if using nvm, you can fist enter `nvm install`)
 
 `npm start bookmarks.html`
+
+# Usage as library
+
+Install in your project:
+
+`npm i firefoxbookmarktagtransform` 
+
+Use in your project:
+
+```JavaScript
+import callmeanything from "firefoxbookmarktagtransform";
+
+callmeanything("pathtofile");
+```
+
 
 # Use case
 

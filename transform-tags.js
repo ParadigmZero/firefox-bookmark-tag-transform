@@ -9,7 +9,7 @@ export default function transformBookmarks(inputFilePath) {
     }
 
     if (!existsSync(inputFilePath)) {
-        console.log(`file '${process.argv[2]}' does not exist.`);
+        console.log(`file '${inputFilePath}' does not exist.`);
         process.exit(1);
     }
 
@@ -29,7 +29,7 @@ export default function transformBookmarks(inputFilePath) {
 
     console.log(`Transforming Firefox's desktop-only bookmark tags to a more universal format...`);
 
-    lineReader.eachLine(process.argv[2], function (line, last) {
+    lineReader.eachLine(inputFilePath, function (line, last) {
         const tagsProperty = line.match(/TAGS="(.*)"/);
         if (tagsProperty === null) {
             outputFile.write(line);
